@@ -1,0 +1,41 @@
+.app-shell {
+  max-width: 480px;
+  margin: 40px auto;
+  font-family: system-ui, sans-serif;
+  padding: 0 16px;
+}
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.signin-gate {
+  text-align: center;
+  padding: 40px 0;
+}
+.notes-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.notes-input-row input {
+  flex: 1;
+  padding: 8px;
+}
+.notes-list {
+  list-style: none;
+  padding: 0;
+}
+.notes-list li {
+  display: flex;
+  justify-content: space-between;
+  background: #f4f4f4;
+  padding: 8px 12px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.empty-state {
+  color: #888;
+  text-align: center;
+}
