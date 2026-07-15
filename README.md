@@ -1,21 +1,36 @@
-# Secure Notes — WSO2 Asgardeo Demo
+# Secure Notes — WSO2 Asgardeo Authentication Demo
 
-A small React SPA demonstrating authentication via **WSO2 Asgardeo** (Identity Platform).
-Signed-in users can add, view, and delete personal notes (stored locally in the browser).
+A React single-page application demonstrating real-world identity and access management
+integration using **WSO2 Asgardeo** (WSO2 Identity Platform's cloud IDaaS product).
 
-## Tech
+🔗 Live repo: https://github.com/nethmadtharuka/secure-notes-asgardeo
+
+## What it does
+Users sign in via Asgardeo (passwordless email OTP), then can add, view, and delete
+personal notes. Session state, sign-in/sign-out, and user identity are all handled
+through the Asgardeo React SDK — no custom auth logic written by hand.
+
+## Why this project
+Built to gain hands-on experience with WSO2's identity platform beyond documentation —
+configuring an actual application, login flow, and passwordless authentication method
+end-to-end, then integrating the resulting OIDC flow into a working frontend.
+
+## Tech stack
 - React + Vite
-- `@asgardeo/react` SDK for login/logout and session state
-- Email OTP passwordless login configured via Asgardeo
-- localStorage for note persistence
+- `@asgardeo/react` SDK — authentication, session management, user context
+- WSO2 Asgardeo — Single-Page Application registration, Email OTP passwordless login flow
+- localStorage — note persistence
+
+## Key WSO2/Asgardeo features used
+- OAuth2/OIDC-based Single-Page Application registration
+- Custom Login Flow configuration (Email OTP passwordless, in place of default username/password)
+- `@asgardeo/react` SDK components: `SignedIn`, `SignedOut`, `SignInButton`, `SignOutButton`, `User`
 
 ## Setup
-1. Create a free org at https://console.asgardeo.io/
+1. Create a free organization at https://console.asgardeo.io/
 2. Register a Single-Page Application, set redirect URL to `http://localhost:5173`
 3. Update `src/main.jsx` with your own Client ID and organization base URL
 4. `npm install && npm run dev`
 
-## Why Asgardeo
-This project uses WSO2's Asgardeo product for authentication instead of rolling
-custom auth, to demonstrate integration with a real identity platform (OAuth2/OIDC
-under the hood, managed via WSO2's SDK).
+## Screenshots
+_(add 1–2 screenshots here — sign-in screen, notes app)_
